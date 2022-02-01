@@ -1,7 +1,5 @@
 name: CI_test_pipeline1
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: '*'
 jobs:
@@ -21,6 +19,4 @@ jobs:
       - uses: iterative/setup-cml@v1
       - name: Run test
         run: |
-          # Your ML workflow goes here
-          pip install -r requirements.txt
           python test.py
